@@ -14,10 +14,10 @@ class CampusMap:
         # Format: (room_id, description, x, y, floor)
         rooms = [
             # Ground Floor (floor 0)
-            ("G01", "Main Entrance", 100, 400, 0),
+            ("G01", "Main Entrance", -100, 0, 0),
             ("G02", "Reception", 300, 400, 0),
             ("G03", "Cafeteria", 500, 400, 0),
-            ("G04", "Library", 300, 300, 0),
+            ("G04", "Library", 700, 500, 0),
             
             # First Floor (floor 1)
             ("101", "Computer Lab", 100, 200, 1),

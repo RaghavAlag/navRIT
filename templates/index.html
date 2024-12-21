@@ -66,6 +66,21 @@
             margin-bottom: 1.5rem;
             position: relative;
         }
+        :root {
+        --primary-color: #2a9d8f;
+        --secondary-color: #2a9d8f;
+        --accent-color: #e76f51;
+        --background-color: #f8f9fa; /* Light mode background */
+        --card-color: #ffffff; /* Light mode card color */
+    }
+
+    .dark-mode {
+        --primary-color: #2a9d8f;
+        --secondary-color: #2a9d8f;
+        --accent-color: #e63946;
+        --background-color: #2a2a2a; /* Dark mode background */
+        --card-color: #4a4a4a; /* Dark mode card color */
+    }
 
         .input-group i {
             position: absolute;
@@ -220,6 +235,7 @@
     <div class="header">
         <h1>Campus Navigator</h1>
         <p>Find your way around campus with our interactive map</p>
+        <button id="theme-toggle" class="toggle-button">Switch to Dark Mode</button>
     </div>
 
     <div class="content-wrapper">
@@ -409,6 +425,16 @@
                 getDirections();
             }
         };
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    
+    // Change button text based on the current mode
+    if (document.body.classList.contains('dark-mode')) {
+        this.textContent = 'Switch to Light Mode';
+    } else {
+        this.textContent = 'Switch to Dark Mode';
+    }
+});
     </script>
 </body>
 </html>
